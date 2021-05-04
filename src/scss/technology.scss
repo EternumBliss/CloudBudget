@@ -1,0 +1,79 @@
+@mixin before($url, $top) {
+  content: $url;
+  position: absolute;
+  left: 50%;
+  top: $top;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+.technology {
+  padding: 63px 0 104px;
+
+  &__title {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    margin-bottom: 52px;
+  }
+
+  &__Mcol {
+    height: 255px;
+    position: relative;
+
+  }
+
+  &__number {
+    text-align: center;
+    @include txt(100px, 120px);
+    font-weight: normal;
+    color: rgba(16, 16, 16, 0.08);
+    position: relative;
+  }
+
+  &__col-3 {
+    height: 225px;
+    padding-top: 40px;
+  }
+
+  &__col-3:first-child &__number::before {
+    @include before(url("../images/technology/T1.png"), 45px);
+  }
+
+  &__col-3:nth-child(2) &__number::before {
+    @include before(url("../images/technology/T2.png"), 34px);
+  }
+
+  &__col-3:nth-child(3) &__number::before {
+    @include before(url("../images/technology/T3.png"), 34px);
+  }
+
+  &__col-3:nth-child(4) &__number::before {
+    @include before(url("../images/technology/T4.png"), 30px);
+  }
+  &__card-title {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
+  &__card-subtitle {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
